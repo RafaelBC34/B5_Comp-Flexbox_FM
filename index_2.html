@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <title>Bootstrap 5 Flexbox - Guía completa - FM</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row my-5">
+            <div class="col">
+                <h4>Fill</h4>
+                <hr>
+
+                <!-- Variantes:
+                
+                .flex-fill
+
+                sm | md | lg | xl | xxl
+                .flex-*-fill
+                
+                -->
+
+                <div class="mb-5 bg-secondary text-white d-flex align-items-start" style="height: 100px;">
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">
+                        Lorem ipsum dolor sit amet...
+                    </div>
+                    <!-- Con 'flex-fill' ocupa todo el espacio horizontal disponible -->
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger flex-fill">.flex-fill</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger flex-fill">.flex-fill</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Alineamiento vertical -->
+        <div class="row my-5">
+            <div class="col">
+                <h4>Align Items</h4>
+                <hr>
+
+                <!-- Variantes:
+                    .align-items-start
+                    .align-items-center
+                    .align-items-end
+                    .align-items-baseline
+                    .align-items-strech
+                
+                    sm | md | lg | xl | xxl
+                    .align-items-*-start
+                    .align-items-*-center
+                    .align-items-*-end
+                    .align-items-*-baseline
+                    .align-items-*-stretch
+                -->
+
+                <p>.align-items-start</p>
+                <div class="mb-5 bg-secondary text-white d-flex align-items-start" style="height: 200px;">
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 1</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 2</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 3</div>
+                </div>
+
+                <p>.align-items-center</p>
+                <div class="mb-5 bg-secondary text-white d-flex align-items-center" style="height: 200px;">
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 1</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 2</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 3</div>
+                </div>
+
+                <p>.align-items-end</p>
+                <div class="mb-5 bg-secondary text-white d-flex align-items-end" style="height: 200px;">
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 1</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 2</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 3</div>
+                </div>
+
+                <p>.align-items-baseline</p>
+                <div class="mb-5 bg-secondary text-white d-flex align-items-baseline" style="height: 200px;">
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 1</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 2</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 3</div>
+                </div>
+
+                <p>.align-items-stretch</p>
+                <div class="mb-5 bg-secondary text-white d-flex align-items-stretch" style="height: 200px;">
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 1</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 2</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 3</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row my-5">
+            <div class="col">
+                <h4>Align Self</h4>
+                <hr>
+
+                <!-- Variantes:
+                    .align-self-start
+                    .align-self-center
+                    .align-self-end
+                    .align-self-baseline
+                    .align-self-stretch
+                
+                    sm | md | lg | xl | xxl
+                    .align-self-*-start
+                    .align-self-*-center
+                    .align-self-*-end
+                    .align-self-*-baseline
+                    .align-self-*-stretch
+                
+                -->
+
+                <div class="mb-5 bg-secondary text-white d-flex" style="height: 200px;">
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger align-self-start">.align-self-start</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger align-self-center">.align-self-center</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger align-self-end">.align-self-end</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger align-self-baseline">.align-self-baseline</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger align-self-stretch">.align-self-streth</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row my-5">
+            <div class="col">
+                <h4>Auto Margins</h4>
+                <hr>
+
+                <div class="mb-5 bg-secondary text-white d-flex justify-contend-end">
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger me-auto">.me-auto</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 2</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 3</div>
+                </div>
+
+                <div class="mb-5 bg-secondary text-white d-flex justify-contend-start">
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">.me-auto</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 2</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger ms-auto">Caja 3</div>
+                </div>
+
+                <div class="mb-5 bg-secondary text-white d-flex flex-column align-items-start" style="height: 350px;">
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger mb-auto">.mb-auto</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 2</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 3</div>
+                </div>
+
+                <div class="mb-5 bg-secondary text-white d-flex flex-column align-items-end" style="height: 350px;">
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 1</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 2</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger mt-auto">.mt-auto</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Continuar video desde 35:50 -->
+
+    <script src="./js/bootstrap.min.js"></script>
+</body>
+
+</html>
