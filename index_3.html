@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <title>Pt 3 - Bootstrap 5 Flexbox - Guía completa - FM</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row my-5">
+            <div class="col">
+                <h4>Wrap</h4>
+                <hr>
+
+                <!-- Variantes:
+                    .flex-nowrap
+                    .flex-wrap
+                    .flex-wrap-reverse
+
+                    sm | md | lg | xl | xxl
+                    .flex-*-nowrap
+                    .flex-*-wrap
+                    .flex-*-wrap-reverse
+                
+                -->
+
+                <!-- Con 'nowrap', se intenta poner todo el contenido en la misma fila -->
+                <p>.flex-nowrap</p>
+                <div class="mb-5 bg-secondary text-white d-flex flex-nowrap" style="height: 300px;">
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 1</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 2</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 3</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 4</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 5</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 6</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 7</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 8</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 9</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 10</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 11</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 12</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 13</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 14</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 15</div>
+                </div>
+
+                <!-- En cambio con 'wrap', se distribuye en función del tamaño dentro del contenedor en distintas filas -->
+                <p>.flex-wrap</p>
+                <div class="mb-5 bg-secondary text-white d-flex flex-wrap" style="height: 300px;">
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 1</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 2</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 3</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 4</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 5</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 6</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 7</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 8</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 9</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 10</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 11</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 12</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 13</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 14</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 15</div>
+                </div>
+
+                <p>.flex-wrap-reverse</p>
+                <div class="mb-5 bg-secondary text-white d-flex flex-wrap-reverse" style="height: 300px;">
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 1</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 2</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 3</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 4</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 5</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 6</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 7</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 8</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 9</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 10</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 11</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 12</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 13</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 14</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 15</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row my-5">
+            <div class="col">
+                <h4>Order</h4>
+                <hr>
+
+                <!-- Variantes:
+                    .order-1 -> .order-5
+
+                    sm | md | lg | xl | xxl
+                    .order-*-1 -> .order-*-5
+                
+                -->
+
+                <!-- Se puede indicar un 'order' hasta el valor 5. Las que no tienen 'order' indicado se situan al principio, por lo que es mejor indicarlo en todas -->
+                <div class="mb-5 bg-secondary text-white d-flex flex-nowrap" style="height: 200px;">
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger order-3">Caja 1</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 2</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger order-1">Caja 3</div>
+                </div>
+
+                <div class="mb-5 bg-secondary text-white d-flex flex-nowrap" style="height: 200px;">
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger order-2">Caja 1</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger order-3">Caja 2</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger order-1">Caja 3</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row my-5">
+            <div class="col">
+                <h4>Align content</h4>
+                <hr>
+
+                <!-- Con 'wrap' y 'align-content-start', las cajas se situan a la izquierda y se reducen a su propio contenido -->
+                <p>.align-content-start</p>
+                <div class="mb-5 bg-secondary text-white d-flex flex-wrap align-content-start" style="height: 300px;">
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 1</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 2</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 3</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 4</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 5</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 6</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 7</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 8</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 9</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 10</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 11</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 12</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 13</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 14</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 15</div>
+                </div>
+
+                <p>.align-content-center</p>
+                <div class="mb-5 bg-secondary text-white d-flex flex-wrap align-content-center" style="height: 300px;">
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 1</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 2</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 3</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 4</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 5</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 6</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 7</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 8</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 9</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 10</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 11</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 12</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 13</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 14</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 15</div>
+                </div>
+
+                <p>.align-content-end</p>
+                <div class="mb-5 bg-secondary text-white d-flex flex-wrap align-content-end" style="height: 300px;">
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 1</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 2</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 3</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 4</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 5</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 6</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 7</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 8</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 9</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 10</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 11</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 12</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 13</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 14</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 15</div>
+                </div>
+
+                <p>.align-content-between</p>
+                <div class="mb-5 bg-secondary text-white d-flex flex-wrap align-content-between" style="height: 300px;">
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 1</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 2</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 3</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 4</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 5</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 6</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 7</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 8</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 9</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 10</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 11</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 12</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 13</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 14</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 15</div>
+                </div>
+
+                <p>.align-content-around</p>
+                <div class="mb-5 bg-secondary text-white d-flex flex-wrap align-content-around" style="height: 300px;">
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 1</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 2</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 3</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 4</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 5</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 6</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 7</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 8</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 9</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 10</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 11</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 12</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 13</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 14</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 15</div>
+                </div>
+
+                <p>.align-content-evenly</p>
+                <div class="mb-5 bg-secondary text-white d-flex flex-wrap align-content-evenly" style="height: 300px;">
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 1</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 2</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 3</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 4</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 5</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 6</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 7</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 8</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 9</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 10</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 11</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 12</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 13</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 14</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 15</div>
+                </div>
+
+                <p>.align-content-stretch</p>
+                <div class="mb-5 bg-secondary text-white d-flex flex-wrap align-content-stretch" style="height: 300px;">
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 1</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 2</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 3</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 4</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 5</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 6</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 7</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 8</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 9</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 10</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 11</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 12</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 13</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 14</div>
+                    <div class="bg-info p-4 bg-opacity-75 border border-danger">Caja 15</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Continuar video desde 35:50 -->
+
+    <script src="./js/bootstrap.min.js"></script>
+</body>
+
+</html>
